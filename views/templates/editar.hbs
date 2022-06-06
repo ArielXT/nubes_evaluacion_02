@@ -1,0 +1,41 @@
+<div class="row m-0 justify-content-center align-items-center vh-100 agenda">
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                EDITAR DATOS DE LA PERSONA
+            </div>
+
+            <div class="card-body">
+                {{#each alumno}}
+                <form action="/alumnos/editar/{{this.id}}" method="POST">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" name="nombre" id="nombre" value="{{this.nombre}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" name="apellido" id="apellido" value="{{this.apellido}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="grado">Grado:</label>
+                        <input type="text" name="grado" id="grado" value="{{this.grado}}" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="seccion">Seccion:</label>
+                        <input type="text" name="seccion" id="seccion" value="{{this.seccion}}"
+                            class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="turno">Turno:</label>
+                        <input type="text" name="turno" id="turno" value="{{this.turno}}"
+                            class="form-control">
+                    </div>
+                    <div class="form-group" align="center">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+                </form>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>
