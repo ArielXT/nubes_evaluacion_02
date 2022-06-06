@@ -4,13 +4,11 @@ AWS.config.update({region:'us-east-1'});
 
 class imageRepository {
 
-    constructor(){
-        
+    constructor(){        
         this.s3 = new AWS.S3({
-            accessKeyId: "AKIA2XPRAPQQIBHIEUCR",
-            secretAccessKey: "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",
+            accessKeyId: "TU_ACCES_KEY_ID",
+            secretAccessKey: "TU_SECRET_ACCESS_KEY",
         });
-
     }
 
     async uploadImage(name, imagen, type){
@@ -19,7 +17,7 @@ class imageRepository {
 
         return new Promise((resolve, reject) =>{
             const params = {
-                Bucket: 'azevaluacionnubes',
+                Bucket: 'NOMBRE_DEL_BUCKET',
                 Key: key,
                 Body: imagen,
                 ACL: 'public-read',
@@ -30,7 +28,7 @@ class imageRepository {
                 if(err){
                     reject(err);
                 }
-                resolve(`https://azevaluacionnubes.s3.amazonaws.com/${key}`);
+                resolve(`https://NOMBRE_DEL_BUCKET.s3.amazonaws.com/${key}`);
             });
     
         })
@@ -39,7 +37,7 @@ class imageRepository {
     async deleteImage(key){
 
         const params = {
-            Bucket: 'azevaluacionnubes',
+            Bucket: 'NOMBRE_DEL_BUCKET',
             Key: key
         }
 
