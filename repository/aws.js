@@ -7,8 +7,8 @@ class imageRepository {
     constructor(){
         
         this.s3 = new AWS.S3({
-            accessKeyId: "AKIA2XPRAPQQIBOIZBUO",
-            secretAccessKey: "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",
+            accessKeyId: "AKIA2XPRAPQQIBHIEUCR",
+            secretAccessKey: "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",
         });
 
     }

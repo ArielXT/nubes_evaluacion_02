@@ -120,7 +120,7 @@ router.get('/agregar', (req, res) => {
 
 router.post('/agregar', (req, res) => {
     var data = {
-        id: req.params.id,
+        id: req.body.id,
         nombre: req.body.nombre,
         apellido: req.body.apellido,
         grado: req.body.grado,
